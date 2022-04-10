@@ -1,20 +1,23 @@
 import { Box, CssBaseline, Toolbar } from "@mui/material";
 import { FC } from "react";
 
-// import { Container, defaultBackgroundColor, Spacing } from '@portal/core';
+import {
+  defaultBackgroundColor,
+  Spacing,
+} from "resources/themes/ThemesConstants";
 
-// import { useLayoutSelector } from '../../hooks/useLayoutSelector';
-// import { ApplicationNavbar } from '../ApplicationNavbar/ApplicationNavbar';
-// import { ApplicationSidebar } from '../ApplicationSidebar/ApplicationSidebar';
-// import { ProgressOverlay } from '../ProgressOverlay/ProgressOverlay';
+import { useLayoutSelector } from "hooks/useLayoutSelector";
+import { Container } from "components/Container/Container";
+import { ApplicationNavbar } from "components/ApplicationNavbar/ApplicationNavbar";
+import { ApplicationSidebar } from "components/ApplicationSidebar/ApplicationSidebar";
+import { ProgressOverlay } from "components/ProgressOverlay/ProgressOverlay";
 
 export const ApplicationShell: FC = ({ children }) => {
-  // const progressOverlay = useLayoutSelector((state) => state.progressOverlay);
+  const progressOverlay = useLayoutSelector((state) => state.progressOverlay);
 
   return (
     <>
-      <div></div>
-      {/* <Box sx={{ display: 'flex', backgroundColor: defaultBackgroundColor }}>
+      <Box sx={{ display: "flex", backgroundColor: defaultBackgroundColor }}>
         <CssBaseline />
         <ApplicationNavbar />
         <ApplicationSidebar />
@@ -23,7 +26,9 @@ export const ApplicationShell: FC = ({ children }) => {
           {children}
         </Container>
       </Box>
-      <ProgressOverlay isOpen={progressOverlay.isActive}>{progressOverlay.tip}</ProgressOverlay> */}
+      <ProgressOverlay isOpen={progressOverlay.isActive}>
+        {progressOverlay.tip}
+      </ProgressOverlay>
     </>
   );
 };

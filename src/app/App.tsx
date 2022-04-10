@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
-// import { GlobalNotificationRenderer } from '@portal/core/notifications';
-// import { ApplicationShell, useUpdateLayout } from '@portal/core/ui';
+import { GlobalNotificationRenderer } from "components/GlobalNotificationRenderer/GlobalNotificationRenderer";
+import { ApplicationShell } from "components/ApplicationShell/ApplicationShell";
 import { useUpdateLayout } from "hooks/useUpdateLayout";
 import { useSyncLanguageWithLocale } from "hooks/useSyncLanguageWithLocale";
 
@@ -29,10 +29,10 @@ export const App: React.FC = () => {
 
   return (
     <>
-      {/* <ApplicationShell> */}
-      <Routes />
-      {/* <GlobalNotificationRenderer /> */}
-      {/* </ApplicationShell> */}
+      <ApplicationShell>
+        <Routes />
+        <GlobalNotificationRenderer />
+      </ApplicationShell>
     </>
   );
 };
