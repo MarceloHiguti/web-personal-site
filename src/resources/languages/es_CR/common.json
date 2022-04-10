@@ -1,0 +1,12 @@
+{
+  "error": {
+    "400": {
+      "title": "Desculpe, estamos com problemas",
+      "message": "Por favor tente acessar o site mais tarde"
+    },
+    "404": {
+      "title": "Página não encontrada",
+      "message": "Por favor revise o link que você está acessando"
+    }
+  }
+}
