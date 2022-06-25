@@ -17,7 +17,8 @@ export const App: React.FC = () => {
     const layoutOptions = {
       profileMenu: true,
       navbar: true,
-      sidebar: true,
+      sidebar: false,
+      navigationHorizontalMenu: true,
     };
     if (!hasUpdatedLayout.current) {
       updateLayout(layoutOptions);

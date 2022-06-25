@@ -1,6 +1,33 @@
 import { createTheme } from "@mui/material/styles";
 
+export interface ThemeOptions {
+  hgtStyle?: {
+    horizontalMenuBackgroundColor?: string;
+    backgroundColor?: string;
+  };
+}
+declare module "@mui/material/styles" {
+  interface Theme {
+    hgtStyle: {
+      horizontalMenuBackgroundColor: string;
+      backgroundColor: string;
+    };
+  }
+
+  interface ThemeOptions {
+    hgtStyle?: {
+      horizontalMenuBackgroundColor?: string;
+      backgroundColor?: string;
+    };
+  }
+}
+
 export const themeMaterial = createTheme({
+  typography: {
+    allVariants: {
+      fontFamily: "Poppins",
+    },
+  },
   palette: {
     primary: {
       main: "#3f51b5",
@@ -8,6 +35,10 @@ export const themeMaterial = createTheme({
     secondary: {
       main: "#F50057",
     },
+  },
+  hgtStyle: {
+    horizontalMenuBackgroundColor: "white",
+    backgroundColor: "red",
   },
 });
 

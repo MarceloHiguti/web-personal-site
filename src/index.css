@@ -1,0 +1,21 @@
+/* body,
+html {
+  font-family: 'Barlow', sans-serif;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: local('Barlow'), url(./fonts/Barlow-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-weight: 900;
+  src: local('Barlow'), url(./fonts/Barlow-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-weight: 900;
+  src: local('Barlow'), url(./fonts/Barlow-Black.ttf) format('truetype');
+} */

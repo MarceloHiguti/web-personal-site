@@ -9,12 +9,9 @@ import { I18nextProvider } from "react-i18next";
 import { Provider as ReduxProvider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { i18next, initI18Next } from "resources/languages/i18n";
-import { themes } from "resources/themes/schema";
-import { setToLocalStorage } from "utils/utils";
 import { themeMaterial } from "resources/themes/ThemesConstants";
 
 async function main() {
-  setToLocalStorage("all-themes", themes.data);
   await initI18Next();
 
   ReactDOM.render(

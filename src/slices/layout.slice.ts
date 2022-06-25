@@ -4,6 +4,7 @@ export interface LayoutElementsVisibility {
   sidebar: boolean;
   navbar: boolean;
   profileMenu: boolean;
+  navigationHorizontalMenu: boolean;
 }
 
 interface LayoutProgressOverlay {
@@ -22,6 +23,7 @@ const initialState: LayoutSlice = {
     sidebar: false,
     navbar: false,
     profileMenu: false,
+    navigationHorizontalMenu: false,
   },
   isSidebarOpen: false,
   progressOverlay: {

@@ -11,6 +11,7 @@ import { Container } from "components/Container/Container";
 import { ApplicationNavbar } from "components/ApplicationNavbar/ApplicationNavbar";
 import { ApplicationSidebar } from "components/ApplicationSidebar/ApplicationSidebar";
 import { ProgressOverlay } from "components/ProgressOverlay/ProgressOverlay";
+import { ApplicationHorizontalMenu } from "components/ApplicationHorizontalMenu/ApplicationHorizontalMenu";
 
 export const ApplicationShell: FC = ({ children }) => {
   const progressOverlay = useLayoutSelector((state) => state.progressOverlay);
@@ -23,6 +24,7 @@ export const ApplicationShell: FC = ({ children }) => {
         <ApplicationSidebar />
         <Container spacing={Spacing.zero}>
           <Toolbar />
+          <ApplicationHorizontalMenu />
           {children}
         </Container>
       </Box>

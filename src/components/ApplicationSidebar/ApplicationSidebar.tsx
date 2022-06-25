@@ -9,7 +9,7 @@ import { fixedSize } from "resources/themes/ThemesConstants";
 import { useLayoutSelector } from "hooks/useLayoutSelector";
 import { toggleSidebarOpen } from "slices/layout.slice";
 import { NavigationMenu } from "components/NavigationMenu/NavigationMenu";
-import { SIDEBAR_ITEMS } from "resources/menu/MenuItems";
+import { MENU_ITEMS } from "resources/menu/MenuItems";
 
 export const enum DrawerVariant {
   Temporary = "temporary",
@@ -25,8 +25,6 @@ export const ApplicationSidebar: FC = () => {
   const onCloseSidebar = () => {
     dispatch(toggleSidebarOpen());
   };
-
-  const sidebarSections = [SIDEBAR_ITEMS];
 
   const hasEnoughSpace = useMediaQuery((theme: Theme) =>
     theme.breakpoints.up("lg")
@@ -56,7 +54,7 @@ export const ApplicationSidebar: FC = () => {
       }}
     >
       <Toolbar />
-      <NavigationMenu sections={sidebarSections} />
+      <NavigationMenu sections={MENU_ITEMS} />
     </Drawer>
   );
 };

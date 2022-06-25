@@ -6,16 +6,15 @@ import { FC, memo } from "react";
 import { useLayoutSelector } from "hooks/useLayoutSelector";
 import { BrandLogo } from "./BrandLogo";
 import { MenuCollapseButton } from "./MenuCollapseButton";
+import { useHgtTheme } from "hooks/useHgtTheme";
 
 export const ApplicationNavbar: FC = memo(function ApplicationNavbar() {
+  const theme = useHgtTheme();
   const overDrawerIndexPosition = 1;
   const positionFromDrawer = (theme: Theme) =>
     theme.zIndex.drawer + overDrawerIndexPosition;
 
   const isNavbarVisible = useLayoutSelector((state) => state.visibility.navbar);
-  // const isProfileVisible = useLayoutSelector(
-  //   (state) => state.visibility.profileMenu
-  // );
 
   return (
     <AppBar
@@ -23,6 +22,7 @@ export const ApplicationNavbar: FC = memo(function ApplicationNavbar() {
       sx={{
         zIndex: positionFromDrawer,
         display: isNavbarVisible ? undefined : "none",
+        backgroundColor: theme?.hgtStyle?.horizontalMenuBackgroundColor,
       }}
       data-testid="application-navbar"
     >

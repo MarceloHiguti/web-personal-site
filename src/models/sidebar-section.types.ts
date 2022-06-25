@@ -6,5 +6,5 @@ export type SidebarSection = {
 export interface SidebarSectionItem {
   label: string;
   href: string;
-  icon: string;
+  icon?: string;
 }

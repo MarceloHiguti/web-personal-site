@@ -30,9 +30,11 @@ export const NavigationMenuItem: React.FC<NavigationMenuItemProps> = memo(
       >
         <ListItem disablePadding>
           <ListItemButton>
-            <ColoredListItemIcon>
-              <Icon>{item.icon}</Icon>
-            </ColoredListItemIcon>
+            {item.icon && (
+              <ColoredListItemIcon>
+                <Icon>{item.icon}</Icon>
+              </ColoredListItemIcon>
+            )}
             <ListItemText primary={translate(item.label)} />
           </ListItemButton>
         </ListItem>
